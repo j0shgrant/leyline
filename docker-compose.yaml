@@ -1,0 +1,20 @@
+version: "3"
+services:
+  master:
+    image: "gitlab.com/j0shgrant/leyline-master:latest"
+    ports:
+    - "8080:8080"
+  foreman-eu-west-1:
+    image: "gitlab.com/j0shgrant/leyline-foreman:latest"
+    environment:
+      LEYLINE_FOREMAN_REGION: eu-west-1
+  foreman-eu-west-2:
+    image: "gitlab.com/j0shgrant/leyline-foreman:latest"
+    environment:
+      LEYLINE_FOREMAN_REGION: eu-west-2
+  foreman-eu-west-3:
+    image: "gitlab.com/j0shgrant/leyline-foreman:latest"
+    environment:
+      LEYLINE_FOREMAN_REGION: eu-west-3
+  minion-eu-west-1:
+    image: "gitlab.com/j0shgrant/leyline-minion:latest"
